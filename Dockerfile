@@ -1,18 +1,25 @@
-# Utiliser l'image officielle PHP avec Apache
 FROM php:8.2-apache
 
 # Activer mod_rewrite
 RUN a2enmod rewrite
 
-# Copier les fichiers dans le dossier web du conteneur
-COPY . /var/www/html/
+# Installer dépendances système + extensions PHP souvent utilisées
+RUN apt-get update && apt-get install -y \
+    git unzip libpng-dev libjpeg-dev libfreetype6-dev libonig-dev libzip-dev zip \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install gd mbstring zip pdo pdo_mysql
 
 # Installer Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-# Installer les dépendances PHP
+# Définir le dossier de travail
 WORKDIR /var/www/html
-RUN composer install --no-dev --optimize-autoloader
+
+# Copier les fichiers du projet
+COPY . .
+
+# Installer les dépendances PHP (si composer.json présent)
+RUN if [ -f composer.json ]; then composer install --no-dev --optimize-autoloader || true; fi
 
 # Donner les permissions
 RUN chown -R www-data:www-data /var/www/html \
@@ -21,5 +28,4 @@ RUN chown -R www-data:www-data /var/www/html \
 # Exposer le port 80
 EXPOSE 80
 
-# Lancer Apache
 CMD ["apache2-foreground"]
