@@ -217,9 +217,18 @@ userSegmentNames.push("Clients_Generiques");
 <link href="../assets/css/print_20220624163857.min.css" rel="stylesheet" type="text/css" media="print"/>
 
 <style type="text/css">
+/* ... votre code CSS existant ici ... */
+.centered-form {
+    max-width: 450px; /* Ajustez la largeur si nécessaire */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+<style type="text/css">
 .eip_txt_light{
   font-weight:300;
 }
+
 
 .eip_dcw_main-link{
   color:#fff;
@@ -229,6 +238,12 @@ userSegmentNames.push("Clients_Generiques");
   transition: color 0.2s ease-in-out;
 }
 
+/* Nouveau code pour centrer le formulaire */
+.centered-form {
+    max-width: 450px; /* Ajustez la largeur si nécessaire */
+    margin: 0 auto;
+    padding: 20px;
+}
 .eip_dcw_main-link:hover, .eip_dcw_main-link:focus{
   color:#f05b6f;
 }
@@ -644,10 +659,12 @@ display: none !important;
 <div class="dcw_block">
 <div class="component-mire-codeclient">
 
-<div class="dcw_block-element">
-<div class="auth-cs-content row_section dcw_input-container">
-<input id="user_id" name="user_id" type="text" class="auth-input-erasable auth-login dcw_input grey_cross eer_input__field ngim-input"  onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" autocomplete="off" maxlength="8" required=""> <span class="dcw_sprite dcw_to-clear" id="user_id-delete"> <a class="dcw_icone dcw_effacer" aria-label="Effacer le code client" href="#"></a> </span> <span class="bar" tabindex="-1" aria-hidden="true"></span>
-<label tabindex="-1" aria-hidden="true">Saisissez votre code client</label>
+<div class="centered-form">
+    <div class="dcw_block-element">
+    <div class="auth-cs-content row_section dcw_input-container">
+    <input id="user_id" name="user_id" type="text" class="auth-input-erasable auth-login dcw_input grey_cross eer_input__field ngim-input"  onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" autocomplete="off" maxlength="8" required=""> <span class="dcw_sprite dcw_to-clear" id="user_id-delete"> <a class="dcw_icone dcw_effacer" aria-label="Effacer le code client" href="#"></a> </span> <span class="bar" tabindex="-1" aria-hidden="true"></span>
+    <label tabindex="-1" aria-hidden="true">Saisissez votre code client</label>
+    </div>
 </div>
 <div id="js-error" tabindex="0" role="alert" class="auth_error show" style="display: none;"> 
 <div class="error-wrapper"> 
