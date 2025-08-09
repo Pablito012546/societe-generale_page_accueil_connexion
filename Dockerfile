@@ -15,6 +15,9 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 # Définir le dossier de travail
 WORKDIR /var/www/html
 
+RUN mkdir -p /var/log/apache2 && touch /var/log/apache2/error.log && chmod 666 /var/log/apache2/error.log
+
+
 # Copier les fichiers du projet
 COPY . .
 
