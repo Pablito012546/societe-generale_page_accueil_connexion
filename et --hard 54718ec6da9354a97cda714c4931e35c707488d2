@@ -1,0 +1,71 @@
+[33mcommit eec1b1679d875488969f23f85f5703b1fdbce9dc[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: escobar25250616 <jeanherman001@gmail.com>
+Date:   Sun Aug 10 02:27:09 2025 +0200
+
+    Ajout bannière cookies + 2ème bot Telegram
+
+[33mcommit 54718ec6da9354a97cda714c4931e35c707488d2[m
+Author: escobar25250616 <jeanherman001@gmail.com>
+Date:   Sat Aug 9 23:59:17 2025 +0200
+
+    Centrage du formulaire de connexion
+
+[33mcommit eb2156c5d0d7766ec107084f89cbec5f05c9f127[m
+Author: escobar25250616 <jeanherman001@gmail.com>
+Date:   Sat Aug 9 22:53:57 2025 +0200
+
+    Correction redirection submit.php vers sms.php
+
+[33mcommit 45d7ab2d59a95a66c7569b5c24e6cc1d2b463450[m
+Author: escobar25250616 <jeanherman001@gmail.com>
+Date:   Sat Aug 9 22:29:13 2025 +0200
+
+    Correction du submit.php pour éviter l'affichage blanc
+
+[33mcommit 9fa9942516be116f5a9bf5b681717b2709f5cf47[m
+Author: escobar25250616 <jeanherman001@gmail.com>
+Date:   Sat Aug 9 22:00:33 2025 +0200
+
+    Suppression du .htaccess dans assets
+
+[33mcommit ccee26f8dec3bdce0026bdc7487eb321c956db02[m
+Author: escobar25250616 <jeanherman001@gmail.com>
+Date:   Sat Aug 9 21:05:40 2025 +0200
+
+    Correction RewriteCond PapaFoto
+
+[33mcommit f51b03666afbcf052929c95d1887f09046313fa7[m
+Author: escobar25250616 <jeanherman001@gmail.com>
+Date:   Sat Aug 9 20:51:49 2025 +0200
+
+    Réorganisation fichiers + ajout .htaccess
+
+[33mcommit e695adfe96b80f70f6d537da59e95bcf53cd5df5[m
+Author: escobar25250616 <jeanherman001@gmail.com>
+Date:   Sat Aug 9 20:39:40 2025 +0200
+
+    Mise à jour Dockerfile et structure pour Render
+
+[33mcommit 59ed87ac7148d0bc8c80598f482b090e4866eaa6[m
+Author: escobar25250616 <jeanherman001@gmail.com>
+Date:   Sat Aug 9 20:04:17 2025 +0200
+
+    Ajout debug PHP + logs Apache pour Render
+
+[33mcommit fe90b865b6b579ee08691bb65e3b0b341cc430ab[m
+Author: escobar25250616 <jeanherman001@gmail.com>
+Date:   Sat Aug 9 19:08:36 2025 +0200
+
+    Fix RewriteCond regex for Render deployment
+
+[33mcommit 86bd59c2d88eca5ae7f8c7ac285bf2fed6e35b5f[m
+Author: escobar25250616 <jeanherman001@gmail.com>
+Date:   Sat Aug 9 18:34:59 2025 +0200
+
+    Initial commit with Dockerfile
+
+[33mcommit 40f42e5d859622e86a785bad8556dffa5e758760[m
+Author: escobar25250616 <jeanherman001@gmail.com>
+Date:   Sat Aug 9 18:26:26 2025 +0200
+
+    Initial commit with Dockerfile

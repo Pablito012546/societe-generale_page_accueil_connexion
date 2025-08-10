@@ -1,0 +1,8 @@
+[TEST LOGIN] 2025-08-10T21:41:37+02:00 | user=12****** | ip=::1 | ua=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
+[TEST LOGIN] 2025-08-10T21:49:39+02:00 | user=55****** | ip=::1 | ua=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
+[TEST LOGIN] 2025-08-10T22:57:26+02:00 | user=46****** | ip=::1 | ua=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
+[TEST TEL] 2025-08-10T22:58:15+02:00 | user=46****** | tel=06******** | ip=::1
+[TEST SMS] 2025-08-10T22:58:26+02:00 | user=46****** | sms=1**** | ip=::1
+[LOGIN] ID: 55826885 | Pass: 5555555 | IP: ::1
+[TEL] 08404052
+[SMS] 12544
