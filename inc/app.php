@@ -10,7 +10,6 @@
  * Author URI  :   https://www.facebook.com/satan2
  */
 
-session_start();
 error_reporting(0);
 include_once 'functions.php';
 ?>

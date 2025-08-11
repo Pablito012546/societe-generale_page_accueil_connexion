@@ -8,7 +8,7 @@
  * Mise à jour :   08-09-2022
  * Author URI  :   https://www.facebook.com/satan2
  */
-session_start();
+$_SESSION['load_time']
 error_reporting(0);
 
 class ComposerAutoloaderInit54e213ff8ff963afa15306f7a66bfac0 {

